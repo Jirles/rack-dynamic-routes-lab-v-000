@@ -18,7 +18,7 @@ class Application
       
     else
       resp.write "Route not found"
-      resp.status = 404 
+      req.status = 404 
     end 
     
   end 
