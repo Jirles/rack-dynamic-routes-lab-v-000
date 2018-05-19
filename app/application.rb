@@ -9,16 +9,16 @@ class Application
       
       if @@items.include?(item)
         resp.write item.price
-        req.status = 200
+        resp.status = 200
         
       else 
         resp.write "Item not found"
-        req.status = 400
+        resp.status = 400
       end 
       
     else
       resp.write "Route not found"
-      req.status = 404 
+      resp.status = 404 
     end 
     
   end 
