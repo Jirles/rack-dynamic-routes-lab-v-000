@@ -9,11 +9,11 @@ class Application
       
       if @@items.include?(item)
         resp.write item.price
-        resp.status = 200
+        req.status = 200
         
       else 
         resp.write "Item not found"
-        resp.status = 400
+        req.status = 400
       end 
       
     else
