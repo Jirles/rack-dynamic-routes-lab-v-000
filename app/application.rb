@@ -9,7 +9,7 @@ class Application
       
       if item_available(item)
         item_obj = find_by_name(item)
-        resp.write "#{item.price}"
+        resp.write "#{item_obj.price}"
         resp.status = 200
         
       else 
