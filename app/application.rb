@@ -31,7 +31,7 @@ class Application
   end 
   
   def item_available?(item_name)
-    !!find(item_name)
+    !!find_by_name(item_name)
   end 
   
 end 
