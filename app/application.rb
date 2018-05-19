@@ -23,4 +23,9 @@ class Application
     
   end 
   
+  def find(item_name)
+    #finds a item by name and returns an instance of an Item 
+    @@items.detect{|i| i.name == item_name}
+  end 
+  
 end 
