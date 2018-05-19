@@ -24,6 +24,7 @@ class Application
     
   end 
   
+  # yay helper functions
   def find_by_name(item_name)
     #finds a item by name and returns an instance of an Item 
     @@items.detect{|i| i.name == item_name}
