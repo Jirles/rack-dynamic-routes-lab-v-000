@@ -28,4 +28,8 @@ class Application
     @@items.detect{|i| i.name == item_name}
   end 
   
+  def item_available?(item_name)
+    !!find(item_name)
+  end 
+  
 end 
