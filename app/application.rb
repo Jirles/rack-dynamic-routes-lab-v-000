@@ -7,7 +7,8 @@ class Application
     if req.path.match(/items/)
       item = req.path.split('/items/').last
       
-      if @@items.include?(item)
+      if item_available(item)
+        item_obj = find_by_name(item)
         resp.write "#{item.price}"
         resp.status = 200
         
@@ -23,7 +24,7 @@ class Application
     
   end 
   
-  def find(item_name)
+  def find_by_name(item_name)
     #finds a item by name and returns an instance of an Item 
     @@items.detect{|i| i.name == item_name}
   end 
