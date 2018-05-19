@@ -7,7 +7,7 @@ class Application
     if req.path.match(/items/)
       item = req.path.split('/items/').last
       
-      if item_available(item)
+      if item_available?(item)
         item_obj = find_by_name(item)
         resp.write "#{item_obj.price}"
         resp.status = 200
