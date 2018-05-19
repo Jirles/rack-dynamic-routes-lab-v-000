@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new 
     req = Rack::Request.new(env) 
     
-    if req.path.atch(/items/)
+    if req.path.match(/items/)
       item = req.path.split('/items/').last
       
       if item_available(item)
